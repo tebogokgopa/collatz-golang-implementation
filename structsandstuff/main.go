@@ -34,11 +34,11 @@ func (p Person) SavePersonToFile(){
 
 	defer f.Close()
 	
-		fmt.Fprintf(f,"Name : %s\n", p.name)
-		fmt.Fprintf(f, "Surname : %s\n",p.lastname)
-		fmt.Fprintf(f,"Age : %d\n", p.age)
-		fmt.Fprintf(f,"Identity No: %s\n",p.id)
-		fmt.Fprintln(f,"")
+	fmt.Fprintf(f,"Name : %s\n", p.name)
+	fmt.Fprintf(f, "Surname : %s\n",p.lastname)
+	fmt.Fprintf(f,"Age : %d\n", p.age)
+	fmt.Fprintf(f,"Identity No: %s\n",p.id)
+	fmt.Fprintln(f,"")
 }
 
 func (p Person) ReadFromFile()  {
@@ -64,7 +64,6 @@ func (p Person) ReadFromFile()  {
 }
 
 
-
 func main()  {
 	
 	me := Person{
@@ -74,7 +73,7 @@ func main()  {
 		"8402224785886",
 	}
 
-	//me.PrintPerson()
+	me.PrintPerson()
 	me.SavePersonToFile()
-	//me.ReadFromFile()
+	me.ReadFromFile()
 }
